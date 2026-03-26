@@ -7,28 +7,33 @@ interface FAQItem {
   answer: string;
 }
 
+const defaultFAQs: FAQItem[] = [
+  {
+    question: "Что такое OZON Склад и как он работает?",
+    answer:
+      "OZON Склад — это платформа управления FBS-сборкой, которая объединяет все процессы вашего склада в одном окне. Система автоматически получает заказы с OZON, формирует задания для сотрудников, контролирует сборку и помогает с отгрузкой. Подключение занимает несколько минут — просто введите API-ключи вашего магазина.",
+  },
+  {
+    question: "Работает ли платформа с несколькими магазинами и складами одновременно?",
+    answer:
+      "Да, на тарифах Про и Бизнес поддерживается неограниченное количество магазинов OZON и физических складов. Все заказы отображаются в единой панели с фильтрацией по магазину и складу. Вы можете легко переключаться между магазинами кнопкой 'Переключить магазин' в шапке интерфейса.",
+  },
+  {
+    question: "Как платформа помогает решать проблемы с остатками ФБС?",
+    answer:
+      "Платформа автоматически сверяет фактические остатки на складе с данными в системе OZON. Раздел 'Проверка остатков ФБС' показывает расхождения, а 'Проблемы остатков' — заказы, которые нельзя собрать из-за нехватки товара. Это позволяет заранее обновить остатки и избежать отмен заказов.",
+  },
+  {
+    question: "Как начать работу и сколько стоит?",
+    answer:
+      "Начать просто: выберите тариф, зарегистрируйтесь и введите API-ключи вашего OZON-магазина. Тариф Старт — от 1 900 ₽/месяц для небольших магазинов до 500 заказов. Тариф Про — от 4 900 ₽/месяц для растущего бизнеса до 5 000 заказов. Тариф Бизнес — от 14 900 ₽/месяц для крупных продавцов без ограничений.",
+  },
+];
+
 interface FAQSectionProps {
   title?: string;
   faqs?: FAQItem[];
 }
-
-const defaultFAQs: FAQItem[] = [
-  {
-    question: "Что такое СинхроЛинк и как он работает?",
-    answer:
-      "СинхроЛинк — это AI-платформа, которая объединяет все ваши инструменты коммуникации — звонки, чаты и встречи — в единую систему. Она анализирует разговоры в реальном времени, предоставляя аналитику по тональности, настроению, синхронизации команды и паттернам взаимодействия. Просто интегрируйте СинхроЛинк с вашими инструментами (Slack, Zoom, Microsoft Teams) и начните получать инсайты мгновенно.",
-  },
-  {
-    question: "Как СинхроЛинк использует мои данные для создания кастомного AI-чата?",
-    answer:
-      "СинхроЛинк обрабатывает ваши коммуникационные данные с помощью передовых моделей обработки естественного языка и машинного обучения. Все данные шифруются end-to-end и обрабатываются в соответствии со стандартами корпоративной безопасности. Ваши данные никогда не передаются третьим сторонам, и вы полностью контролируете, что анализируется. AI обучается на паттернах коммуникации вашей команды для предоставления персонализированных инсайтов.",
-  },
-  {
-    question: "Как начать работу с СинхроЛинк и какие есть тарифы?",
-    answer:
-      "Начать просто: зарегистрируйтесь на бесплатный пробный период, подключите инструменты коммуникации и начните анализ в течение нескольких минут. Мы предлагаем гибкие тарифы: Старт (бесплатно для небольших команд), Про (2900₽/пользователь/месяц) и Корпоративный (индивидуальные условия с выделенной поддержкой). Все тарифы включают базовые функции анализа тональности и инсайты в реальном времени. Свяжитесь с нашим отделом продаж для корпоративных решений.",
-  },
-];
 
 export const FAQSection = ({ title = "Часто задаваемые вопросы", faqs = defaultFAQs }: FAQSectionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -38,11 +43,12 @@ export const FAQSection = ({ title = "Часто задаваемые вопро
   };
 
   return (
-    <section className="w-full py-24 px-8 bg-white">
+    <section className="w-full py-24 px-8" style={{ background: "hsl(220, 20%, 10%)" }} id="faq">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-16">
           <div className="lg:col-span-4">
-            <h2 className="text-[40px] leading-tight font-normal text-[#202020] tracking-tight sticky top-24">
+            <p className="text-xs font-mono uppercase tracking-widest text-[#00a3ff] mb-4">FAQ</p>
+            <h2 className="text-[40px] leading-tight font-bold text-white tracking-tight sticky top-24">
               {title}
             </h2>
           </div>
@@ -50,13 +56,13 @@ export const FAQSection = ({ title = "Часто задаваемые вопро
           <div className="lg:col-span-8">
             <div className="space-y-0">
               {faqs.map((faq, index) => (
-                <div key={index} className="border-b border-[#e5e5e5] last:border-b-0">
+                <div key={index} className="border-b" style={{ borderColor: "#1e2d42" }}>
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full flex items-center justify-between py-6 text-left group hover:opacity-70 transition-opacity duration-150"
+                    className="w-full flex items-center justify-between py-6 text-left group hover:opacity-80 transition-opacity duration-150"
                     aria-expanded={openIndex === index}
                   >
-                    <span className="text-lg leading-7 text-[#202020] pr-8 font-normal">
+                    <span className="text-base leading-6 text-white pr-8 font-medium">
                       {faq.question}
                     </span>
                     <motion.div
@@ -64,7 +70,7 @@ export const FAQSection = ({ title = "Часто задаваемые вопро
                       transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
                       className="flex-shrink-0"
                     >
-                      <Plus className="w-6 h-6 text-[#202020]" strokeWidth={1.5} />
+                      <Plus className="w-5 h-5 text-[#00a3ff]" strokeWidth={2} />
                     </motion.div>
                   </button>
 
@@ -78,7 +84,7 @@ export const FAQSection = ({ title = "Часто задаваемые вопро
                         className="overflow-hidden"
                       >
                         <div className="pb-6 pr-12">
-                          <p className="text-lg leading-6 text-[#666666]">
+                          <p className="text-base leading-6 text-[#8b9ab5]">
                             {faq.answer}
                           </p>
                         </div>

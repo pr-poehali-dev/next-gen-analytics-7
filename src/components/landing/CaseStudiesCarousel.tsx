@@ -14,453 +14,228 @@ interface CaseStudy {
 
 const caseStudies: CaseStudy[] = [
   {
-    id: "notion",
-    company: "ТехноСофт",
+    id: "sizelab",
+    company: "SizeLab",
     logo: (
-      <svg fill="none" height="48" viewBox="0 0 38 48" width="38" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="m14.25 5c0 7.8701-6.37994 14.25-14.25 14.25v9.5h14.25v14.25h9.5c0-7.8701 6.3799-14.25 14.25-14.25v-9.5h-14.25v-14.25z"
-          fill="#16b364"
-        />
-      </svg>
+      <div className="w-12 h-12 rounded-xl bg-[#005bff] flex items-center justify-center">
+        <span className="text-white font-black text-lg">SL</span>
+      </div>
     ),
-    title: "ТехноСофт использует СинхроЛинк для понимания взаимодействия команд в реальном времени.",
-    features: ["Звонки в Slack", "Транскрипции встреч", "Отчеты о настроениях"],
-    quote: "СинхроЛинк дает нам ясность в синхронизации команды, которой раньше не было.",
-    attribution: "Мария Иванова, Руководитель операций, ТехноСофт",
-    accentColor: "#16b364",
+    title: "SizeLab автоматизировал FBS-сборку и сократил время обработки заказов на 40%.",
+    features: ["Автосборка заказов", "Печать этикеток", "Контроль остатков"],
+    quote: "С OZON Склад мы перестали пропускать сроки отгрузки — система сама расставляет приоритеты.",
+    attribution: "Мария Иванова, Руководитель склада, SizeLab",
+    accentColor: "#005bff",
   },
   {
-    id: "cloudwatch",
-    company: "ДатаВью",
+    id: "granula",
+    company: "GranulaHealth",
     logo: (
-      <svg fill="none" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
-        <rect fill="url(#gradient1)" height="48" rx="12" width="48" />
-        <circle cx="24" cy="24" r="12" fill="white" />
-        <circle cx="24" cy="24" r="8" fill="#3b82f6" />
-        <defs>
-          <linearGradient id="gradient1" gradientUnits="userSpaceOnUse" x1="24" x2="24" y1="0" y2="48">
-            <stop stopColor="#3b82f6" />
-            <stop offset="1" stopColor="#1d4ed8" />
-          </linearGradient>
-        </defs>
-      </svg>
+      <div className="w-12 h-12 rounded-xl bg-[#00d4a0] flex items-center justify-center">
+        <span className="text-[#0a1628] font-black text-lg">G</span>
+      </div>
     ),
-    title: "ДатаВью использует СинхроЛинк для мониторинга динамики команд в глобальных офисах.",
-    features: ["Звонки в Slack", "Транскрипции встреч", "Отчеты о настроениях"],
-    quote: "С СинхроЛинк мы видим паттерны взаимодействия, которые напрямую влияют на скорость разработки.",
-    attribution: "Сергей Петров, VP Engineering, ДатаВью",
-    accentColor: "#3b82f6",
+    title: "GranulaHealth управляет 3 складами из одного окна без потери заказов.",
+    features: ["Мультисклад", "Проверка ФБС остатков", "Командная работа"],
+    quote: "Раньше каждое утро начиналось с ручной проверки остатков. Теперь платформа делает это за нас.",
+    attribution: "Сергей Петров, CEO, GranulaHealth",
+    accentColor: "#00d4a0",
   },
   {
-    id: "eightball",
-    company: "СинергиЯ",
+    id: "organicplus",
+    company: "OrganicPlus",
     logo: (
-      <svg fill="none" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="24" cy="24" r="20" fill="#0A0D12" />
-        <circle cx="28" cy="20" r="8" fill="white" />
-      </svg>
+      <div className="w-12 h-12 rounded-xl bg-[#7c3aed] flex items-center justify-center">
+        <span className="text-white font-black text-lg">OP</span>
+      </div>
     ),
-    title: "СинергиЯ полагается на СинхроЛинк для отслеживания здоровья команды и качества асинхронной коммуникации.",
-    features: ["Звонки в Slack", "Отчеты о настроениях"],
-    quote: "СинхроЛинк изменил наше понимание культуры удаленной работы.",
-    attribution: "Анна Смирнова, Сооснователь, СинергиЯ",
-    accentColor: "#0A0D12",
+    title: "OrganicPlus масштабировал бизнес в 3 раза, не увеличивая команду склада.",
+    features: ["Автосборка заказов", "Аналитика заказов", "Контроль остатков"],
+    quote: "Система сама распределяет заказы между складами — мы просто отгружаем.",
+    attribution: "Анна Смирнова, Операционный директор, OrganicPlus",
+    accentColor: "#7c3aed",
   },
   {
-    id: "coreos",
-    company: "КорСистемс",
+    id: "vitamax",
+    company: "VitaMax",
     logo: (
-      <svg fill="none" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
-        <rect fill="#101828" height="48" rx="12" width="48" />
-        <path d="M16 16h16v16H16z" fill="#155eef" />
-        <path d="M20 20h8v8h-8z" fill="white" />
-      </svg>
+      <div className="w-12 h-12 rounded-xl bg-[#f59e0b] flex items-center justify-center">
+        <span className="text-[#0a1628] font-black text-lg">VM</span>
+      </div>
     ),
-    title: "КорСистемс использует СинхроЛинк для синхронизации дизайн и инженерных команд во время спринтов.",
-    features: ["Транскрипции встреч", "Отчеты о настроениях"],
-    quote: "Анализ настроений помогает выявить точки напряжения до того, как они станут блокерами.",
-    attribution: "Николай Козлов, VP Engineering, КорСистемс",
-    accentColor: "#155eef",
+    title: "VitaMax снизил процент проблемных остатков с 25% до 3% за первый месяц.",
+    features: ["Проверка ФБС остатков", "Аналитика заказов", "Командная работа"],
+    quote: "Наконец-то видим в реальном времени, что реально есть на складе и что числится в системе.",
+    attribution: "Николай Козлов, Директор по логистике, VitaMax",
+    accentColor: "#f59e0b",
   },
 ];
 
-const FeatureBadge = ({ name }: { name: string }) => {
-  const getIcon = (featureName: string) => {
-    if (featureName.includes("Slack")) {
-      return (
-        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 opacity-50">
-          <path d="M6 2C6 1.44772 5.55228 1 5 1C4.44772 1 4 1.44772 4 2V6C4 6.55228 4.44772 7 5 7C5.55228 7 6 6.55228 6 6V2Z" fill="#E01E5A" />
-          <path d="M10 6C10.5523 6 11 5.55228 11 5C11 4.44772 10.5523 4 10 4H6V6H10Z" fill="#36C5F0" />
-          <path d="M14 5C14 4.44772 13.5523 4 13 4C12.4477 4 12 4.44772 12 5V9C12 9.55228 12.4477 10 13 10C13.5523 10 14 9.55228 14 9V5Z" fill="#2EB67D" />
-          <path d="M6 10C5.44772 10 5 10.4477 5 11C5 11.5523 5.44772 12 6 12H10V10H6Z" fill="#ECB22E" />
-        </svg>
-      );
-    } else if (featureName.includes("встреч") || featureName.includes("Транскрипции")) {
-      return (
-        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 opacity-50">
-          <path d="M2 4C2 3.44772 2.44772 3 3 3H9C9.55228 3 10 3.44772 10 4V10C10 10.5523 9.55228 11 9 11H3C2.44772 11 2 10.5523 2 10V4Z" stroke="#5E6AD2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M10 5L13 3V11L10 9" stroke="#5E6AD2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      );
-    } else if (featureName.includes("настроен") || featureName.includes("Отчеты")) {
-      return (
-        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 opacity-50">
-          <path d="M3 9L5 11L8 8L13 13" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M3 5H13M3 5V13M13 5V13M3 13H13" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      );
-    }
-    return null;
-  };
+const FeatureBadge = ({ name }: { name: string }) => (
+  <div className="flex items-center gap-2 rounded-lg px-3 py-1.5 text-xs font-medium text-[#c5d3e8] border border-[#1e2d42] bg-[#0d1f3c]">
+    {name}
+  </div>
+);
 
-  return (
-    <div className="flex items-center gap-2 bg-white/75 shadow-sm border border-black/5 rounded-lg px-2 py-1 text-sm font-medium text-foreground">
-      {getIcon(name)}
-      {name}
+const StatsCard = ({ delay, zIndex }: { delay: number; zIndex: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20, scale: 0.95 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1], delay }}
+    className="absolute w-[340px] rounded-xl p-5"
+    style={{
+      backgroundColor: "rgba(13, 31, 60, 0.92)",
+      boxShadow: "inset 0 0 0 1px rgba(0, 163, 255, 0.15), 0 8px 32px 0 rgba(0, 0, 0, 0.4)",
+      transform: "translate(-180px, -70px)",
+      zIndex,
+    }}
+  >
+    <div className="flex flex-col space-y-4">
+      <div className="flex items-center justify-between">
+        <h4 className="text-sm font-semibold text-white">Статус сборки</h4>
+        <span className="text-xs text-[#00d4a0]">● Онлайн</span>
+      </div>
+      <div className="space-y-2">
+        {[
+          { label: "Москва", value: "42 заказа", color: "#005bff", pct: "78%" },
+          { label: "СПб", value: "18 заказов", color: "#00a3ff", pct: "55%" },
+          { label: "Екатеринбург", value: "9 заказов", color: "#00d4a0", pct: "32%" },
+        ].map((item) => (
+          <div key={item.label} className="flex items-center gap-3 p-2 rounded-lg bg-[#0a1628]">
+            <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: item.color }} />
+            <span className="text-xs text-[#c5d3e8] flex-1">{item.label}</span>
+            <span className="text-xs font-semibold" style={{ color: item.color }}>{item.value}</span>
+          </div>
+        ))}
+      </div>
     </div>
-  );
-};
+  </motion.div>
+);
 
-const NotionCollaborationCard = ({ delay, zIndex }: { accentColor: string; delay: number; zIndex: number }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20, scale: 0.95 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1], delay }}
-      className="absolute w-[380px] rounded-xl p-6 backdrop-blur-xl"
-      style={{
-        backgroundColor: "rgba(255, 255, 255, 0.85)",
-        boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.8), 0 8px 32px 0 rgba(0, 0, 0, 0.12)",
-        filter: "drop-shadow(0 4px 6px rgba(30, 30, 44, 0.15))",
-        transform: "translate(-200px, -80px)",
-        zIndex,
-      }}
-    >
-      <div className="flex flex-col space-y-5">
-        <div className="flex items-center justify-between">
-          <h4 className="text-sm font-semibold text-foreground">Синхронизация команды</h4>
-          <span className="text-xs text-muted-foreground">В реальном времени</span>
-        </div>
-        <div className="space-y-4">
-          <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-500" />
-              <span className="text-sm text-foreground">Дизайн-команда</span>
-            </div>
-            <span className="text-sm font-semibold text-green-600">96%</span>
-          </div>
-          <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-blue-500" />
-              <span className="text-sm text-foreground">Разработка</span>
-            </div>
-            <span className="text-sm font-semibold text-blue-600">94%</span>
-          </div>
-          <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-purple-500" />
-              <span className="text-sm text-foreground">Продукт</span>
-            </div>
-            <span className="text-sm font-semibold text-purple-600">92%</span>
-          </div>
-        </div>
-        <div className="pt-3 border-t border-border/50">
-          <div className="text-xs text-muted-foreground">
-            <span className="font-semibold text-foreground">12</span> активных диалогов
-          </div>
-        </div>
+const OrdersCard = ({ accentColor, delay, zIndex }: { accentColor: string; delay: number; zIndex: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20, scale: 0.95 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1], delay }}
+    className="absolute w-[360px] rounded-xl p-5"
+    style={{
+      backgroundColor: "rgba(13, 31, 60, 0.92)",
+      boxShadow: `inset 0 0 0 1px rgba(0, 163, 255, 0.15), 0 8px 32px 0 rgba(0, 0, 0, 0.4)`,
+      transform: "translate(60px, 20px)",
+      zIndex,
+    }}
+  >
+    <div className="flex flex-col space-y-3">
+      <div className="flex items-center justify-between">
+        <h4 className="text-sm font-semibold text-white">Новые заказы</h4>
+        <span className="px-2 py-0.5 rounded-full text-xs font-bold" style={{ backgroundColor: accentColor + "33", color: accentColor }}>98</span>
       </div>
-    </motion.div>
-  );
-};
-
-const StripeGlobalCard = ({ accentColor, delay, zIndex }: { accentColor: string; delay: number; zIndex: number }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20, scale: 0.95 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1], delay }}
-      className="absolute w-[400px] rounded-xl p-6 backdrop-blur-xl"
-      style={{
-        backgroundColor: "rgba(255, 255, 255, 0.85)",
-        boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.8), 0 8px 32px 0 rgba(0, 0, 0, 0.12)",
-        filter: "drop-shadow(0 4px 6px rgba(30, 30, 44, 0.15))",
-        transform: "translate(-180px, -60px)",
-        zIndex,
-      }}
-    >
-      <div className="flex flex-col space-y-5">
-        <div className="flex items-center justify-between">
-          <h4 className="text-sm font-semibold text-foreground">Динамика глобальной команды</h4>
-          <span className="text-xs text-muted-foreground">За 24 часа</span>
+      {[
+        { id: "83922156-8204", product: "L-Теанин, хлорофилл 60 кап.", qty: 2 },
+        { id: "72332381-0234", product: "Omega-3, EPA+DHA 60 кап.", qty: 1 },
+        { id: "24025767-8126", product: "L-Карнозин 500 мг 60 кап.", qty: 3 },
+      ].map((order) => (
+        <div key={order.id} className="flex items-center gap-3 p-2 rounded-lg bg-[#0a1628]">
+          <span className="text-xs font-mono text-[#00a3ff] truncate">{order.id}</span>
+          <span className="text-xs text-[#c5d3e8] flex-1 truncate">{order.product}</span>
+          <span className="px-1.5 py-0.5 rounded text-xs font-bold bg-[#1a3a2a] text-[#00d4a0]">{order.qty}</span>
         </div>
-        <div className="grid grid-cols-3 gap-3">
-          <div className="text-center p-3 bg-muted/20 rounded-lg">
-            <div className="text-2xl font-bold text-foreground">МСК</div>
-            <div className="text-xs text-muted-foreground mt-1">Москва</div>
-            <div className="text-xs font-semibold text-green-600 mt-2">Высокая</div>
-          </div>
-          <div className="text-center p-3 bg-muted/20 rounded-lg">
-            <div className="text-2xl font-bold text-foreground">СПБ</div>
-            <div className="text-xs text-muted-foreground mt-1">Петербург</div>
-            <div className="text-xs font-semibold text-blue-600 mt-2">Активная</div>
-          </div>
-          <div className="text-center p-3 bg-muted/20 rounded-lg">
-            <div className="text-2xl font-bold text-foreground">НСК</div>
-            <div className="text-xs text-muted-foreground mt-1">Новосибирск</div>
-            <div className="text-xs font-semibold text-purple-600 mt-2">Пик</div>
-          </div>
-        </div>
-        <div className="space-y-2">
-          <div className="flex items-center justify-between text-sm">
-            <span className="text-muted-foreground">Кросс-офисная скорость</span>
-            <span className="font-semibold text-foreground">+28%</span>
-          </div>
-          <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
-            <div className="h-full rounded-full" style={{ width: "87%", backgroundColor: accentColor }} />
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
-const FigmaSprintCard = ({ accentColor, delay, zIndex }: { accentColor: string; delay: number; zIndex: number }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20, scale: 0.95 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1], delay }}
-      className="absolute w-[380px] rounded-xl p-6 backdrop-blur-xl"
-      style={{
-        backgroundColor: "rgba(255, 255, 255, 0.85)",
-        boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.8), 0 8px 32px 0 rgba(0, 0, 0, 0.12)",
-        filter: "drop-shadow(0 4px 6px rgba(30, 30, 44, 0.15))",
-        transform: "translate(-190px, -70px)",
-        zIndex,
-      }}
-    >
-      <div className="flex flex-col space-y-5">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center text-white"
-              style={{ backgroundColor: accentColor }}
-            >
-              <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
-                <rect x="3" y="3" width="10" height="10" rx="2" stroke="currentColor" strokeWidth="1.5" />
-              </svg>
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-foreground">Планирование спринта</h4>
-              <p className="text-xs text-muted-foreground">Неделя 3, День 2</p>
-            </div>
-          </div>
-        </div>
-        <div className="space-y-3">
-          <div className="flex items-center justify-between p-3 bg-muted/20 rounded-lg">
-            <span className="text-sm text-foreground">Качество передачи дизайна</span>
-            <div className="flex items-center gap-2">
-              <div className="w-16 h-1.5 bg-muted rounded-full overflow-hidden">
-                <div className="h-full bg-green-500" style={{ width: "94%" }} />
-              </div>
-              <span className="text-xs font-semibold text-foreground">94%</span>
-            </div>
-          </div>
-          <div className="flex items-center justify-between p-3 bg-muted/20 rounded-lg">
-            <span className="text-sm text-foreground">Настроение команды</span>
-            <div className="flex items-center gap-2">
-              <div className="w-16 h-1.5 bg-muted rounded-full overflow-hidden">
-                <div className="h-full bg-blue-500" style={{ width: "89%" }} />
-              </div>
-              <span className="text-xs font-semibold text-foreground">89%</span>
-            </div>
-          </div>
-          <div className="flex items-center justify-between p-3 bg-muted/20 rounded-lg">
-            <span className="text-sm text-foreground">Обнаружение конфликтов</span>
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-semibold text-green-600">Низкое</span>
-            </div>
-          </div>
-        </div>
-        <div className="pt-3 border-t border-border/50">
-          <div className="flex items-center justify-between text-xs">
-            <span className="text-muted-foreground">Выявленных блокеров</span>
-            <span className="font-semibold text-foreground">2</span>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
+      ))}
+    </div>
+  </motion.div>
+);
 
 export const CaseStudiesCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const currentStudy = caseStudies[currentIndex];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const activeCase = caseStudies[activeIndex];
 
-  const startAutoPlay = () => {
-    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-    autoPlayRef.current = setInterval(() => {
-      nextSlide();
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % caseStudies.length);
+    }, 5000);
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, []);
+
+  const handleSelect = (index: number) => {
+    setActiveIndex(index);
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % caseStudies.length);
     }, 5000);
   };
 
-  const stopAutoPlay = () => {
-    if (autoPlayRef.current) {
-      clearInterval(autoPlayRef.current);
-      autoPlayRef.current = null;
-    }
-  };
-
-  useEffect(() => {
-    if (isAutoPlaying) {
-      startAutoPlay();
-    } else {
-      stopAutoPlay();
-    }
-    return () => stopAutoPlay();
-  }, [isAutoPlaying, currentIndex]);
-
-  const nextSlide = () => {
-    setDirection(1);
-    setCurrentIndex((prev) => (prev + 1) % caseStudies.length);
-  };
-
-  const prevSlide = () => {
-    setDirection(-1);
-    setCurrentIndex((prev) => (prev - 1 + caseStudies.length) % caseStudies.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setDirection(index > currentIndex ? 1 : -1);
-    setCurrentIndex(index);
-  };
-
-  const slideVariants = {
-    enter: (direction: number) => ({ x: direction > 0 ? 1000 : -1000, opacity: 0 }),
-    center: { x: 0, opacity: 1 },
-    exit: (direction: number) => ({ x: direction < 0 ? 1000 : -1000, opacity: 0 }),
-  };
-
   return (
-    <div
-      className="w-full min-h-screen bg-gradient-to-br from-background via-background to-muted/20 flex items-center justify-center py-24 px-8"
-      onMouseEnter={() => setIsAutoPlaying(false)}
-      onMouseLeave={() => setIsAutoPlaying(true)}
-    >
-      <div className="max-w-7xl w-full">
-        <div className="text-center mb-16">
-          <h1 className="text-[40px] leading-tight font-normal text-foreground mb-6 tracking-tight">
-            Истории успеха клиентов
-          </h1>
-          <p className="text-lg leading-7 text-muted-foreground max-w-2xl mx-auto">
-            Узнайте, как ведущие команды используют СинхроЛинк для понимания взаимодействия и синхронизации.
-          </p>
-        </div>
+    <section className="w-full py-24 px-8" style={{ background: "hsl(220, 20%, 10%)" }} id="features">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="text-xs font-mono uppercase tracking-widest text-[#00a3ff] mb-4">Кейсы клиентов</p>
+            <h2 className="text-[40px] font-bold leading-tight text-white mb-6">
+              Лидеры рынка выбирают OZON Склад
+            </h2>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <AnimatePresence mode="wait" custom={direction}>
-              <motion.div
-                key={currentStudy.id}
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
-                className="space-y-6"
-              >
-                <div className="text-foreground/60">{currentStudy.logo}</div>
-                <h2 className="text-4xl font-bold text-foreground leading-tight tracking-tight text-[32px] font-normal">
-                  {currentStudy.title}
-                </h2>
-                <div className="flex flex-wrap gap-2">
-                  {currentStudy.features.map((feature, idx) => (
-                    <FeatureBadge key={idx} name={feature} />
-                  ))}
-                </div>
-                <blockquote className="border-l-4 border-primary pl-6 py-2">
-                  <p className="text-lg leading-7 text-foreground/80 italic mb-3">
-                    "{currentStudy.quote}"
-                  </p>
-                  <footer className="text-sm text-muted-foreground">
-                    {currentStudy.attribution}
-                  </footer>
-                </blockquote>
-              </motion.div>
-            </AnimatePresence>
-
-            <div className="flex items-center gap-6">
-              <div className="flex gap-2">
-                {caseStudies.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => goToSlide(idx)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      idx === currentIndex ? "w-8 bg-primary" : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                    }`}
-                    aria-label={`Перейти к слайду ${idx + 1}`}
-                  />
-                ))}
-              </div>
-              <div className="flex gap-2">
+            <div className="flex gap-2 mb-8 flex-wrap">
+              {caseStudies.map((cs, i) => (
                 <button
-                  onClick={prevSlide}
-                  className="p-2 rounded-lg border border-border hover:bg-accent transition-colors"
-                  aria-label="Предыдущий слайд"
+                  key={cs.id}
+                  onClick={() => handleSelect(i)}
+                  className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
+                    activeIndex === i
+                      ? "text-white border border-[#00a3ff] bg-[#00a3ff]/10"
+                      : "text-[#8b9ab5] border border-[#1e2d42] hover:border-[#00a3ff]/50"
+                  }`}
                 >
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
+                  {cs.company}
                 </button>
-                <button
-                  onClick={nextSlide}
-                  className="p-2 rounded-lg border border-border hover:bg-accent transition-colors"
-                  aria-label="Следующий слайд"
-                >
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-              </div>
+              ))}
             </div>
-          </div>
 
-          <div className="relative h-[500px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div
-                key={currentStudy.id}
+                key={activeCase.id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex items-center gap-3 mb-4">{activeCase.logo}</div>
+                <h3 className="text-xl font-semibold text-white mb-4 leading-snug">{activeCase.title}</h3>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {activeCase.features.map((f) => <FeatureBadge key={f} name={f} />)}
+                </div>
+                <blockquote className="border-l-2 pl-4 mb-2" style={{ borderColor: activeCase.accentColor }}>
+                  <p className="text-[#c5d3e8] text-base italic">"{activeCase.quote}"</p>
+                </blockquote>
+                <p className="text-xs text-[#8b9ab5] ml-4">{activeCase.attribution}</p>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          <div className="relative h-[420px] hidden lg:block">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeCase.id}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="relative w-full h-full flex items-center justify-center"
+                transition={{ duration: 0.5 }}
+                className="absolute inset-0"
               >
-                {currentStudy.id === "notion" && (
-                  <NotionCollaborationCard accentColor={currentStudy.accentColor} delay={0} zIndex={1} />
-                )}
-                {currentStudy.id === "cloudwatch" && (
-                  <StripeGlobalCard accentColor={currentStudy.accentColor} delay={0} zIndex={1} />
-                )}
-                {currentStudy.id === "eightball" && (
-                  <NotionCollaborationCard accentColor={currentStudy.accentColor} delay={0} zIndex={1} />
-                )}
-                {currentStudy.id === "coreos" && (
-                  <FigmaSprintCard accentColor={currentStudy.accentColor} delay={0} zIndex={1} />
-                )}
+                <div
+                  className="absolute inset-0 rounded-2xl"
+                  style={{
+                    background: `radial-gradient(ellipse at center, ${activeCase.accentColor}15 0%, transparent 70%)`,
+                    border: `1px solid ${activeCase.accentColor}22`,
+                  }}
+                />
+                <StatsCard delay={0.1} zIndex={2} />
+                <OrdersCard accentColor={activeCase.accentColor} delay={0.2} zIndex={1} />
               </motion.div>
             </AnimatePresence>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
